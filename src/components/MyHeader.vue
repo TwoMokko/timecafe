@@ -1,10 +1,10 @@
 <template>
-    <div class="header">
-        <router-link to="/" class="logo">LOGO</router-link>
-        <div class="menu">
-            <router-link to="/about">О нас</router-link>
-            <router-link to="/games">Игры</router-link>
-            <router-link to="/events">Мероприятия</router-link>
+    <div class = "header">
+        <router-link to = "/" class = "logo">LOGO</router-link>
+        <div class = "menu">
+            <router-link to = "/about">О нас</router-link>
+            <router-link to = "/games">Игры</router-link>
+            <router-link to = "/events">Мероприятия</router-link>
             <my-button>aaa</my-button>
         </div>
     </div>

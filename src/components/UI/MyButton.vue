@@ -18,8 +18,8 @@
         border: 1px solid teal;
         cursor: pointer;
     }
-    .btn:hover {
-        color: white;
-        border-color: white;
-    }
+    /*.btn:hover {*/
+    /*    color: white;*/
+    /*    border-color: white;*/
+    /*}*/
 </style>

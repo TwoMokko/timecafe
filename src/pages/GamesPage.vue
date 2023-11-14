@@ -1,9 +1,11 @@
 <template>
-    <div>Игры</div>
+    <game-list></game-list>
 </template>
 
 <script>
+    import GameList from "@/components/GameList";
     export default {
+        components: {GameList}
     }
 </script>
 
