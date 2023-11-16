@@ -18,6 +18,16 @@
         border: 1px solid teal;
         cursor: pointer;
     }
+    .active {
+        background-color: teal;
+        color: white;
+    }
+    .btn:focus-visible {
+        outline: none;
+        background-color: teal;
+        color: white;
+        opacity: 0.5;
+    }
     /*.btn:hover {*/
     /*    color: white;*/
     /*    border-color: white;*/

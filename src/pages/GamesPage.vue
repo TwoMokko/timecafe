@@ -1,11 +1,13 @@
 <template>
+    <my-filter></my-filter>
     <game-list></game-list>
 </template>
 
 <script>
     import GameList from "@/components/GameList";
+    import MyFilter from "@/components/MyFilter";
     export default {
-        components: {GameList}
+        components: {MyFilter, GameList}
     }
 </script>
 

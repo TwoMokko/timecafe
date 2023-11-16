@@ -2,7 +2,7 @@
     <div class="item">
         <div class = "picture"></div>
         <div class = "description">
-            <div>Название</div>
+            <header-text>Название</header-text>
             <div>Описание какое-то игры, длинное, возможно</div>
         </div>
         <my-button>Подробнее</my-button>
@@ -11,9 +11,10 @@
 
 <script>
     import MyButton from "@/components/UI/MyButton";
+    import HeaderText from "@/components/UI/HeaderText";
     export default {
         name: "game-item",
-        components: {MyButton}
+        components: {HeaderText, MyButton}
     }
 </script>
 
@@ -27,7 +28,10 @@
         height: 200px;
         margin-bottom: 24px;
     }
-    .description > div:first-child {
-
+    .description > div:nth-of-type(1) {
+        padding-bottom: 12px;
+    }
+    .description > div:nth-child(2) {
+        padding-bottom: 24px;
     }
 </style>
