@@ -25,7 +25,7 @@
 
 <style scoped>
     .container {
-        padding: 0 10% 120px;
+        /*padding: 0 10% 120px;*/
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }

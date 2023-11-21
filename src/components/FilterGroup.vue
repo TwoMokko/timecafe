@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <header-text>Количество игроков</header-text>
+    <div class = "filter">
+        <header-text>{{ type }}</header-text>
         <div class = "btns">
             <my-button
                 v-for = "a in arr"
@@ -13,17 +13,13 @@
 </template>
 
 <script>
-    import MyButton from "@/components/UI/MyButton";
-    import HeaderText from "@/components/UI/HeaderText";
     export default {
         name: "filter-group",
-        components: {
-            HeaderText,
-            MyButton,
-        },
+        components: {},
         data() {
             return {
                 // isActive: false,
+                type: 'Количество игроков',
                 arr: [
                     { name: 'до 2х', id: 1, isActive: false },
                     { name: '3-4', id: 2, isActive: false },
@@ -41,6 +37,10 @@
 </script>
 
 <style scoped>
+    .filter {
+        text-align: center;
+        padding: 1rem 0;
+    }
     .btns {
         display: flex;
         gap: 8px;

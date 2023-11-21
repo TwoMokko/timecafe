@@ -24,12 +24,13 @@
     }
     .btn:focus-visible {
         outline: none;
-        background-color: teal;
-        color: white;
-        opacity: 0.5;
+        /*background-color: teal;*/
+        /*color: white;*/
+        /*opacity: 0.5;*/
     }
-    /*.btn:hover {*/
-    /*    color: white;*/
-    /*    border-color: white;*/
-    /*}*/
+    .btn:hover {
+        /*color: white;*/
+        /*background-color: teal;*/
+        /*opacity: 0.5;*/
+    }
 </style>

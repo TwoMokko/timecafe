@@ -13,5 +13,6 @@ export default {
 <style scoped>
     .header_txt {
         font-weight: bold;
+        padding-bottom: 0.8rem;
     }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class = "filter">
+    <div>
         <filter-group></filter-group>
         <filter-group></filter-group>
     </div>
@@ -16,7 +16,4 @@
 </script>
 
 <style scoped>
-    .filter {
-        text-align: center;
-    }
 </style>

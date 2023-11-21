@@ -5,16 +5,14 @@
             <router-link to = "/about">О нас</router-link>
             <router-link to = "/games">Игры</router-link>
             <router-link to = "/events">Мероприятия</router-link>
-            <my-button>aaa</my-button>
         </div>
     </div>
 </template>
 
 <script>
-    import MyButton from "@/components/UI/MyButton";
     export default {
         name: 'my-header',
-        components: {MyButton}
+        components: {}
     }
 </script>
 
@@ -31,6 +29,7 @@
         align-items: center;
         background-color: lightgray;
         padding: 12px 120px;
+        margin-bottom: 32px;
     }
     .logo {
         padding: 12px;

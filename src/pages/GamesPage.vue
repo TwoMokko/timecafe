@@ -1,6 +1,6 @@
 <template>
     <my-filter></my-filter>
-    <game-list></game-list>
+    <game-list class = "block"></game-list>
 </template>
 
 <script>

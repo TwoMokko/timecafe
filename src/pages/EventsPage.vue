@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class = "block">
         Мероприятия
     </div>
 </template>
