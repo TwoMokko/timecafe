@@ -1,12 +1,13 @@
 <template>
-    <div class = "header">
+    <header>
         <router-link to = "/" class = "logo">LOGO</router-link>
         <div class = "menu">
             <router-link to = "/about">О нас</router-link>
             <router-link to = "/games">Игры</router-link>
             <router-link to = "/events">Мероприятия</router-link>
+            <router-link to = "/rules">Правила</router-link>
         </div>
-    </div>
+    </header>
 </template>
 
 <script>
@@ -24,21 +25,26 @@
     a:hover {
         color: white;
     }
-    .header {
+    header {
         display: flex;
         align-items: center;
         background-color: lightgray;
-        padding: 12px 120px;
-        margin-bottom: 32px;
+        padding: 1rem 10%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
     }
     .logo {
-        padding: 12px;
+        height: 2rem;
         cursor: pointer;
     }
     .menu {
         display: flex;
         align-items: center;
-        gap: 16px;
         margin-left: auto;
+    }
+    a {
+        padding: 0.5rem;
     }
 </style>

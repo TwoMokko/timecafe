@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class = "container">
         <filter-group></filter-group>
         <filter-group></filter-group>
     </div>
@@ -16,4 +16,9 @@
 </script>
 
 <style scoped>
+    .container {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+    }
 </style>

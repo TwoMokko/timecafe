@@ -1,0 +1,25 @@
+<template>
+    <main class = "block">
+        <page-name>Правила</page-name>
+        <rules-mini></rules-mini>
+        <rules-main></rules-main>
+    </main>
+</template>
+
+<script>
+    import PageName from "@/components/UI/PageName";
+    import RulesMini from "@/components/RulesMini";
+    import RulesMain from "@/components/RulesMain";
+
+    export default {
+        components: {
+            PageName,
+            RulesMini,
+            RulesMain
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>

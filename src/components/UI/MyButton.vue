@@ -23,10 +23,10 @@
         color: white;
     }
     .btn:focus-visible {
-        outline: none;
-        /*background-color: teal;*/
-        /*color: white;*/
-        /*opacity: 0.5;*/
+        /*outline: none;*/
+        background-color: teal;
+        color: white;
+        opacity: 0.5;
     }
     .btn:hover {
         /*color: white;*/

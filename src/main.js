@@ -11,4 +11,4 @@ components.forEach(component => {
 
 app
     .use(router)
-    .mount('#app')
+    .mount('body')

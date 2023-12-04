@@ -3,6 +3,7 @@ import Main from "@/pages/MainPage";
 import Games from "@/pages/GamesPage";
 import About from "@/pages/AboutPage";
 import Event from "@/pages/EventsPage";
+import Rules from "@/pages/RulesPage";
 
 const routes = [
     {
@@ -20,6 +21,10 @@ const routes = [
     {
         path: '/events',
         component: Event
+    },
+    {
+        path: '/rules',
+        component: Rules
     },
 ]
 

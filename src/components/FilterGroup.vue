@@ -21,10 +21,10 @@
                 // isActive: false,
                 type: 'Количество игроков',
                 arr: [
-                    { name: 'до 2х', id: 1, isActive: false },
-                    { name: '3-4', id: 2, isActive: false },
-                    { name: '4-6', id: 3, isActive: false },
-                    { name: 'от 6', id: 4, isActive: false }
+                    { id: 1, name: 'до 2х', isActive: false },
+                    { id: 2, name: '3-4', isActive: false },
+                    { id: 3, name: '4-6', isActive: false },
+                    { id: 4, name: 'от 6', isActive: false }
                 ]
             }
         },
@@ -39,7 +39,7 @@
 <style scoped>
     .filter {
         text-align: center;
-        padding: 1rem 0;
+        padding-bottom: 2rem;
     }
     .btns {
         display: flex;
