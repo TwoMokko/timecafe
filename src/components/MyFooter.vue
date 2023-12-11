@@ -1,35 +1,35 @@
 <template>
     <footer>
         <div class = "logo">
-            <div><strong>LOGO</strong></div>
+            <router-link to = "/" class = "logo">LOGO</router-link>
             <div>
                 <div>Антикафе time cafe</div>
                 <div>Мы открыты круглосуточно</div>
             </div>
         </div>
         <div class = "contact">
-            <div>
+            <a>
                 <div>☁</div>
                 <div>Вконтакте</div>
-            </div>
-            <div>
+            </a>
+            <a>
                 <div>✈</div>
                 <div>Телеграм</div>
-            </div>
-            <div>
+            </a>
+            <a>
                 <div>☎</div>
                 <div>+7(922)458-22-50</div>
-            </div>
+            </a>
         </div>
         <div class = "address">
-            <div>
+            <a>
                 <div>☀</div>
                 <div>Москва, Игровой переулок, 7/4</div>
-            </div>
-            <div>
+            </a>
+            <a>
                 <div>✉</div>
                 <div>timecafe@mail.ru</div>
-            </div>
+            </a>
         </div>
     </footer>
 </template>
@@ -42,11 +42,11 @@
 
 <style scoped>
     a {
-        text-decoration: none;
-        color: teal;
+        color: black;
+        cursor: pointer;
     }
     a:hover {
-        color: white;
+        color: teal;
     }
     footer {
         display: grid;
@@ -60,11 +60,11 @@
         gap: 12px;
         align-items: center;
     }
-    .contact > div {
+    .contact > a {
         display: flex;
         gap: 12px;
     }
-    .address > div {
+    .address > a {
         display: flex;
         gap: 12px;
     }

@@ -2,6 +2,7 @@
     <header>
         <router-link to = "/" class = "logo">LOGO</router-link>
         <div class = "menu">
+            <router-link to = "/">Главная</router-link>
             <router-link to = "/about">О нас</router-link>
             <router-link to = "/games">Игры</router-link>
             <router-link to = "/events">Мероприятия</router-link>
@@ -19,7 +20,6 @@
 
 <style scoped>
     a {
-        text-decoration: none;
         color: teal;
     }
     a:hover {

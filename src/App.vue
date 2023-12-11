@@ -23,13 +23,20 @@
     }
     body {
         overflow: scroll;
+        overflow-x: hidden;
+    }
+    a {
+        text-decoration: none;
     }
     .block {
         padding: 0 10% 60px;
     }
+    .p {
+        padding: 0 20%;
+    }
     main {
         margin-top: 6rem;
-        min-height: calc(100vh - 13rem);
+        min-height: calc(100vh - 12rem);
     }
     *:focus-visible {
         outline: none;

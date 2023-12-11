@@ -1,5 +1,5 @@
 <template>
-    <main class = "block">
+    <main class = "p">
         <page-name>Правила</page-name>
         <rules-mini></rules-mini>
         <rules-main></rules-main>

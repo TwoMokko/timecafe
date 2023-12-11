@@ -8,6 +8,7 @@
             <div>▼</div>
         </div>
         <div
+            class = "text"
             v-show="isShow"
         >
             Этот документ имеет статус официальной письменной публичной оферты в соответствии со статьей 437 Гражданского кодекса РФ.
@@ -72,7 +73,7 @@
         background-color: lightgray;
         align-items: center;
         padding: 1rem 1.5rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 60px;
         cursor: pointer;
     }
     .header:hover {
@@ -83,5 +84,9 @@
     }
     .header > div:nth-child(2) {
         flex: none;
+    }
+    .text {
+        margin-top: -30px;
+        margin-bottom: 60px;
     }
 </style>

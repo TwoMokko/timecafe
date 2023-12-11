@@ -8,15 +8,18 @@
             <div class = "symbol">✦</div>
             <div>{{ a.text }}</div>
         </div>
+        <about-price></about-price>
     </div>
 </template>
 
 <script>
     // import HeaderText from "@/components/UI/HeaderText";
+    import AboutPrice from "@/components/AboutPrice";
 
     export default {
         name: "rules-mini",
         components: {
+            AboutPrice,
             // HeaderText
         },
         data() {
@@ -39,10 +42,13 @@
         padding: 1.5rem;
         margin-bottom: 2rem;
     }
-    .list > div {
+    .list > div:not(:last-child) {
         display: flex;
         gap: 0.5rem;
         padding-bottom: 0.5rem;
+    }
+    .list > div:last-child {
+        padding-top: 1rem;
     }
     .symbol {
         color: teal;
