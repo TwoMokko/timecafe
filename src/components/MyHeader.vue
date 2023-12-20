@@ -1,12 +1,12 @@
 <template>
     <header>
-        <router-link to = "/" class = "logo">LOGO</router-link>
+        <router-link :to = "{ name: 'home' }" class = "logo">LOGO</router-link>
         <div class = "menu">
-            <router-link to = "/">Главная</router-link>
-            <router-link to = "/about">О нас</router-link>
-            <router-link to = "/games">Игры</router-link>
-            <router-link to = "/events">Мероприятия</router-link>
-            <router-link to = "/rules">Правила</router-link>
+            <router-link :to = "{ name: 'home' }">Главная</router-link>
+            <router-link :to = "{ name: 'about' }">О нас</router-link>
+            <router-link :to = "{ name: 'games' }">Игры</router-link>
+            <router-link :to = "{ name: 'events' }">Мероприятия</router-link>
+            <router-link :to = "{ name: 'rules' }">Правила</router-link>
         </div>
     </header>
 </template>

@@ -1,17 +1,24 @@
 <template>
-    <my-header></my-header>
-    <router-view></router-view>
-    <my-footer></my-footer>
+    <admin-template
+        v-if = "$route.path.match(/\/admin\/?.*/)"
+    ></admin-template>
+    <div
+        v-else-if = "$route.name === 'notfound'"
+    ><router-view></router-view></div>
+    <site-template
+        v-else
+    ></site-template>
 </template>
 
 <script>
-    import MyHeader from "@/components/MyHeader";
-    import MyFooter from "@/components/MyFooter";
+    import SiteTemplate from "@/components/SiteTemplate";
+    import AdminTemplate from "@/components/AdminTemplate";
+
     export default {
         components: {
-            MyFooter,
-            MyHeader
-        }
+            AdminTemplate,
+            SiteTemplate
+        },
     }
 </script>
 
