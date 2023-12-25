@@ -1,13 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Main from "@/pages/MainPage";
-import Games from "@/pages/GamesPage";
-import About from "@/pages/AboutPage";
-import Event from "@/pages/EventsPage";
-import Rules from "@/pages/RulesPage";
-import Admin from "@/pages/AdminPage";
+import Main from "@/pages/site/MainPage";
+import Games from "@/pages/site/GamesPage";
+import About from "@/pages/site/AboutPage";
+import Event from "@/pages/site/EventsPage";
+import Rules from "@/pages/site/RulesPage";
+import Admin from "@/pages/admin/AdminPage";
 import notFound from "@/pages/NotFound";
-import adminCreate from "@/pages/AdminCreate";
-import adminUpdate from "@/pages/AdminUpdate";
+import adminGame from "@/pages/admin/game/AdminGame";
+import gameCreate from "@/pages/admin/game/GameCreate";
+import gameUpdate from "@/pages/admin/game/GameUpdate";
+import gameView from "@/pages/admin/game/GameView";
+import adminRoom from "@/pages/admin/room/AdminRoom";
+import roomUpdate from "@/pages/admin/room/RoomUpdate";
+import roomCreate from "@/pages/admin/room/RoomCreate";
 
 const routes = [
     {
@@ -41,14 +46,41 @@ const routes = [
         component: Admin,
         children: [
             {
-            path: 'create',
-            name: 'create',
-            component: adminCreate
+            path: 'games',
+            name: 'ad-game',
+            component: adminGame,
             },
             {
-            path: 'update',
-            name: 'update',
-            component: adminUpdate
+                path: 'game-create',
+                name: 'ag-create',
+                component: gameCreate
+            },
+            {
+                path: 'game-view',
+                name: 'ag-view',
+                component: gameView
+            },
+            {
+                path: 'game-update',
+                name: 'ag-update',
+                component: gameUpdate
+            },
+            {
+            path: 'rooms',
+            name: 'ad-room',
+            component: adminRoom,
+                children: [
+                    {
+                        path: 'create',
+                        name: 'ar-create',
+                        component: roomCreate
+                    },
+                    {
+                        path: 'update',
+                        name: 'ar-update',
+                        component: roomUpdate
+                    },
+                ]
             },
         ]
     },

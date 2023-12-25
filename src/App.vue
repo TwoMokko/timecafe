@@ -11,8 +11,8 @@
 </template>
 
 <script>
-    import SiteTemplate from "@/components/SiteTemplate";
-    import AdminTemplate from "@/components/AdminTemplate";
+    import SiteTemplate from "@/components/site/SiteTemplate";
+    import AdminTemplate from "@/components/admin/AdminTemplate";
 
     export default {
         components: {
@@ -28,9 +28,17 @@
         padding: 0;
         box-sizing: border-box;
     }
+    html {
+        height: 100%;
+    }
     body {
         overflow: scroll;
         overflow-x: hidden;
+        height: 100%;
+    }
+    .body_admin {
+        display: flex;
+        flex-direction: column;
     }
     a {
         text-decoration: none;

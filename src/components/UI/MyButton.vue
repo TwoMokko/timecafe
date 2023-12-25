@@ -17,6 +17,7 @@
         color: teal;
         border: 1px solid teal;
         cursor: pointer;
+        display: inline-block;
     }
     .active {
         background-color: teal;
