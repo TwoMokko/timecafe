@@ -56,12 +56,12 @@ const routes = [
                 component: gameCreate
             },
             {
-                path: 'game-view',
+                path: 'game-view/:id',
                 name: 'ag-view',
                 component: gameView
             },
             {
-                path: 'game-update',
+                path: 'game-update/:id',
                 name: 'ag-update',
                 component: gameUpdate
             },

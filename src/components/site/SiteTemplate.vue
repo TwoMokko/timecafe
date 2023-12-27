@@ -1,6 +1,8 @@
 <template>
     <my-header></my-header>
-    <router-view></router-view>
+    <router-view
+        :games = "games"
+    ></router-view>
     <my-footer></my-footer>
 </template>
 
@@ -13,6 +15,12 @@
         components: {
             MyFooter, MyHeader
         },
+        props: {
+            games: {
+                type: Array,
+                required: true
+            }
+        }
     }
 </script>
 

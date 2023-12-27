@@ -2,7 +2,10 @@
     <main>
         <page-name>Наши игры</page-name>
         <my-filter></my-filter>
-        <game-list class = "block"></game-list>
+        <game-list
+            class = "block"
+            :games = "games"
+        ></game-list>
     </main>
 </template>
 
@@ -16,6 +19,12 @@
             PageName,
             MyFilter,
             GameList
+        },
+        props: {
+            games: {
+                type: Array,
+                required: true
+            }
         }
     }
 </script>

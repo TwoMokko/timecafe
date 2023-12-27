@@ -1,9 +1,10 @@
 <template>
     <div class = "container">
-        <game-item></game-item>
-        <game-item></game-item>
-        <game-item></game-item>
-        <game-item></game-item>
+        <game-item
+            v-for = "item in games"
+            :key = "item.id"
+            :game = "item"
+        ></game-item>
     </div>
 </template>
 
@@ -15,12 +16,12 @@
         components: {
             GameItem
         },
-        // props: {
-        //     games: {
-        //         type: Array,
-        //         required: true
-        //     }
-        // }
+        props: {
+            games: {
+                type: Array,
+                required: true
+            }
+        }
     }
 </script>
 

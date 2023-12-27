@@ -1,7 +1,9 @@
 <template>
     <div class = "admin">
         <admin-panel></admin-panel>
-        <router-view></router-view>
+        <router-view
+            :games = "games"
+        ></router-view>
     </div>
 </template>
 
@@ -15,6 +17,12 @@
         },
         mounted() {
             document.body.classList.add('body_admin')
+        },
+        props: {
+            games: {
+                type: Array,
+                required: true
+            }
         }
     }
 </script>

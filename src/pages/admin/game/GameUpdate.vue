@@ -1,18 +1,18 @@
 <template>
     <div>
-        <h1>Редактирование игры #<strong>{{ arr[0].id }}</strong></h1>
+        <h1>Редактирование игры #<strong>{{ $route.params.id }}</strong></h1>
         <form>
             <div>
                 <div>Название: </div>
-                <input v-model = "arr[0].name"/>
+                <input v-model = "$props.games[0].name"/>
             </div>
             <div>
                 <div>Описание: </div>
-                <textarea v-model = "arr[0].description"></textarea>
+                <textarea v-model = "$props.games[0].description"></textarea>
             </div>
             <div>
                 <div>Статус: </div>
-                <select v-model = "this.arr[0]['state']">
+                <select v-model = "$props.games[0]['state']">
                     <option
                         v-for = "a in states"
                         :key = "a"
@@ -25,21 +25,21 @@
             </div>
             <div>
                 <div>Наименьшее и наибольшее количество игроков: </div>
-                <input type = "number" v-model = "arr[0].people[0]"/>
-                <input type = "number" v-model = "arr[0].people[1]"/>
+                <input type = "number" v-model = "$props.games[0].people[0]"/>
+                <input type = "number" v-model = "$props.games[0].people[1]"/>
             </div>
             <div>
                 <div>Наименьшее и наибольшее время одной игры: </div>
-                <input type = "number" v-model = "arr[0].time[0]"/>
-                <input type = "number" v-model = "arr[0].time[1]"/>
+                <input type = "number" v-model = "$props.games[0].time[0]"/>
+                <input type = "number" v-model = "$props.games[0].time[1]"/>
             </div>
             <div>
                 <div>Минимальный возраст: </div>
-                <input type = "number" v-model = "arr[0].age"/>
+                <input type = "number" v-model = "$props.games[0].age"/>
             </div>
             <div>
                 <div>Ссылка на правила игры: </div>
-                <input v-model = "arr[0].rules"/>
+                <input v-model = "$props.games[0].rules"/>
             </div>
             <input class = "btn" type = "submit" value = "Изменить" @click = "updateGame"/>
         </form>
@@ -47,24 +47,34 @@
 </template>
 
 <script>
+// import { useRoute } from 'vue-router';
+// const route = useRoute();
+// const id = route.params.id;
+
 export default {
     name: "AdminUpdate",
+    props: {
+        games: {
+            type: Array,
+            required: true
+        }
+    },
     data() {
         return {
-            arr: [
-                { id: 1, name: 'Игра 1', description: 'Описание игры 1', state: 'черновик', photo: 'pic1', people: [3, 6], time: [30, 40], age: 8, rules: 'url1' },
-                { id: 2, name: 'Игра 2', description: 'Описание игры 2', state: 'неактивно', photo: 'pic2', people: [2, 4], time: [20, 40], age: 10, rules: 'url2' },
-                { id: 3, name: 'Игра 3', description: 'Описание игры 3', state: 'активно', photo: 'pic3', people: [5, 6], time: [10, 20], age: 8, rules: 'url3' },
-                { id: 4, name: 'Игра 4', description: 'Описание игры 4', state: 'черновик', photo: 'pic4', people: [3, 4], time: [40, 60], age: 6, rules: 'url4' },
-                { id: 5, name: 'Игра 5', description: 'Описание игры 5', state: 'активно', photo: 'pic5', people: [3, 6], time: [40, 40], age: 8, rules: 'url5' },
-            ],
+            // arr: [
+            //     { id: 1, name: 'Игра 1', description: 'Описание игры 1', state: 'черновик', photo: 'pic1', people: [3, 6], time: [30, 40], age: 8, rules: 'url1' },
+            //     { id: 2, name: 'Игра 2', description: 'Описание игры 2', state: 'неактивно', photo: 'pic2', people: [2, 4], time: [20, 40], age: 10, rules: 'url2' },
+            //     { id: 3, name: 'Игра 3', description: 'Описание игры 3', state: 'активно', photo: 'pic3', people: [5, 6], time: [10, 20], age: 8, rules: 'url3' },
+            //     { id: 4, name: 'Игра 4', description: 'Описание игры 4', state: 'черновик', photo: 'pic4', people: [3, 4], time: [40, 60], age: 6, rules: 'url4' },
+            //     { id: 5, name: 'Игра 5', description: 'Описание игры 5', state: 'активно', photo: 'pic5', people: [3, 6], time: [40, 40], age: 8, rules: 'url5' },
+            // ],
             states: [
                 { number: 1, text: 'активно' },
                 { number: 2, text: 'неактивно' },
                 { number: 3, text: 'черновик' },
                 { number: 100, text: 'удалено' }
             ],
-            // selected: this.states[0]["3"],
+            // id: route.params.id
         }
     },
     methods: {

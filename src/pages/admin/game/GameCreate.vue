@@ -4,7 +4,9 @@
         <form>
             <div>
                 <div>Название: </div>
-                <input/>
+                <input
+                    v-model = "game.name"
+                />
             </div>
             <div>
                 <div>Описание: </div>
@@ -57,6 +59,9 @@ export default {
                 { number: 3, text: 'черновик' },
                 { number: 100, text: 'удалено' }
             ],
+            game: {
+                name: '',
+            }
         }
     },
     methods: {
