@@ -17,7 +17,7 @@
         },
         props: {
             games: {
-                type: Array,
+                type: Object,
                 required: true
             }
         }

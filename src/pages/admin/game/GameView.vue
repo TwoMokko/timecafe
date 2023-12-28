@@ -4,35 +4,35 @@
         <div class = "container">
             <div>
                 <div>Название: </div>
-                <div>{{ games[0].name }}</div>
+                <div>{{ games[$route.params.id].name }}</div>
             </div>
             <div>
                 <div>Описание: </div>
-                <div>{{ games[0].description }}</div>
+                <div>{{ games[$route.params.id].description }}</div>
             </div>
             <div>
                 <div>Статус: </div>
-                <div>{{ games[0].state }}</div>
+                <div>{{ games[$route.params.id].state }}</div>
             </div>
             <div>
                 <div>Фото: </div>
-                <div>{{ games[0].photo }}</div>
+                <div>{{ games[$route.params.id].photo }}</div>
             </div>
             <div>
                 <div>Наименьшее и наибольшее количество игроков: </div>
-                <div>{{ games[0].people[0] }}-{{ games[0].people[1] }} чел</div>
+                <div>{{ games[$route.params.id].people[0] }}-{{ games[$route.params.id].people[1] }} чел</div>
             </div>
             <div>
                 <div>Наименьшее и наибольшее время одной игры: </div>
-                <div>{{ games[0].time[0] }}-{{ games[0].time[1] }} мин</div>
+                <div>{{ games[$route.params.id].time[0] }}-{{ games[$route.params.id].time[1] }} мин</div>
             </div>
             <div>
                 <div>Минимальный возраст: </div>
-                <div>{{ games[0].age }}+</div>
+                <div>{{ games[$route.params.id].age }}+</div>
             </div>
             <div>
                 <div>Ссылка на правила игры: </div>
-                <div>{{ games[0].rules }}</div>
+                <div>{{ games[$route.params.id].rules }}</div>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
         name: "GameView",
         props: {
             games: {
-                type: Array,
+                type: Object,
                 required: true
             }
         },

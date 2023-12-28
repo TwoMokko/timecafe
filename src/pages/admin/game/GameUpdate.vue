@@ -4,15 +4,15 @@
         <form>
             <div>
                 <div>Название: </div>
-                <input v-model = "$props.games[0].name"/>
+                <input v-model = "$props.games[$route.params.id].name"/>
             </div>
             <div>
                 <div>Описание: </div>
-                <textarea v-model = "$props.games[0].description"></textarea>
+                <textarea v-model = "$props.games[$route.params.id].description"></textarea>
             </div>
             <div>
                 <div>Статус: </div>
-                <select v-model = "$props.games[0]['state']">
+                <select v-model = "$props.games[$route.params.id]['state']">
                     <option
                         v-for = "a in states"
                         :key = "a"
@@ -25,21 +25,21 @@
             </div>
             <div>
                 <div>Наименьшее и наибольшее количество игроков: </div>
-                <input type = "number" v-model = "$props.games[0].people[0]"/>
-                <input type = "number" v-model = "$props.games[0].people[1]"/>
+                <input type = "number" v-model = "$props.games[$route.params.id].people[0]"/>
+                <input type = "number" v-model = "$props.games[$route.params.id].people[1]"/>
             </div>
             <div>
                 <div>Наименьшее и наибольшее время одной игры: </div>
-                <input type = "number" v-model = "$props.games[0].time[0]"/>
-                <input type = "number" v-model = "$props.games[0].time[1]"/>
+                <input type = "number" v-model = "$props.games[$route.params.id].time[0]"/>
+                <input type = "number" v-model = "$props.games[$route.params.id].time[1]"/>
             </div>
             <div>
                 <div>Минимальный возраст: </div>
-                <input type = "number" v-model = "$props.games[0].age"/>
+                <input type = "number" v-model = "$props.games[$route.params.id].age"/>
             </div>
             <div>
                 <div>Ссылка на правила игры: </div>
-                <input v-model = "$props.games[0].rules"/>
+                <input v-model = "$props.games[$route.params.id].rules"/>
             </div>
             <input class = "btn" type = "submit" value = "Изменить" @click = "updateGame"/>
         </form>
@@ -55,7 +55,7 @@ export default {
     name: "AdminUpdate",
     props: {
         games: {
-            type: Array,
+            type: Object,
             required: true
         }
     },

@@ -3,6 +3,7 @@
         <admin-panel></admin-panel>
         <router-view
             :games = "games"
+            @deleteGame = "(id) => { $emit('deleteGame', id) }"
         ></router-view>
     </div>
 </template>
@@ -20,10 +21,10 @@
         },
         props: {
             games: {
-                type: Array,
+                type: Object,
                 required: true
             }
-        }
+        },
     }
 </script>
 

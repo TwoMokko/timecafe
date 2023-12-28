@@ -1,8 +1,8 @@
 <template>
     <div class = "container">
         <game-item
-            v-for = "item in games"
-            :key = "item.id"
+            v-for = "(item, id) in games"
+            :key = "id"
             :game = "item"
         ></game-item>
     </div>
@@ -18,7 +18,7 @@
         },
         props: {
             games: {
-                type: Array,
+                type: Object,
                 required: true
             }
         }

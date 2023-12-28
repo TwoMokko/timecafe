@@ -22,6 +22,7 @@
     .active {
         background-color: teal;
         color: white;
+        opacity: 0.5;
     }
     .btn:focus-visible {
         /*outline: none;*/
@@ -30,8 +31,8 @@
         opacity: 0.5;
     }
     .btn:hover {
-        /*color: white;*/
-        /*background-color: teal;*/
+        color: white;
+        background-color: teal;
         /*opacity: 0.5;*/
     }
 </style>

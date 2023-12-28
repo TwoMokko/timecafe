@@ -2,7 +2,7 @@
     <div>
         <h1>Список игр</h1>
         <div class = "create">
-            <router-link :to="{ name: 'ag-create' }">Создать</router-link>
+            <my-button @click = "$router.push({ name: 'ag-create' })">Создать</my-button>
         </div>
         <table>
             <thead>
@@ -15,39 +15,65 @@
             </thead>
             <tbody>
                 <tr
-                    v-for = "game in games"
-                    :key = "game.id"
+                    v-for = "(game, id) in games"
+                    :key = "id"
                 >
-                    <td>{{ game.id }}</td>
-                    <td>{{ game.state }}</td>
-                    <td>{{ game.name }}</td>
-                    <td><router-link :to="{ name: 'ag-view', params: { id: game.id } }">Посмотреть</router-link></td>
-                    <td><router-link :to="{ name: 'ag-update', params: { id: game.id } }">Изменить</router-link></td>
-                    <td><a @click="deleteGameId">Удалить</a></td>
+                    <td>{{ id }}</td>
+                    <td>{{ game['state'] }}</td>
+                    <td>{{ game['name'] }}</td>
+                    <td><router-link :to="{ name: 'ag-view', params: { id: id } }">Посмотреть</router-link></td>
+                    <td><router-link :to="{ name: 'ag-update', params: { id: id } }">Изменить</router-link></td>
+                    <td><a @click="showDialogDelete(id)">Удалить</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
+        <my-dialog v-model:show="dialogVisible">
+            <div class = "dialog">
+                <div>Точно удалить?</div>
+                <div>
+                    <my-button @click="deleteGame">Да</my-button>
+                    <my-button @click = "cancelDelete">Передумал</my-button>
+                </div>
+            </div>
+        </my-dialog>
     </div>
 </template>
 
 <script>
+    // import MyDialog from "@/components/UI/MyDialog";
+    // import MyButton from "@/components/UI/MyButton";
+    import MyButton from "@/components/UI/MyButton";
     export default {
         name: "AdminGame",
-        components: {},
+        components: {
+            MyButton
+            // MyButton,
+            // MyDialog,
+        },
         props: {
             games: {
-                type: Array,
+                type: Object,
                 required: true
             }
         },
         data() {
             return {
-
+                dialogVisible: false,
+                id: ''
             }
         },
         methods: {
-            deleteGameId() {
-                alert('Вы уверены?');
+            showDialogDelete(id) {
+                this.id = id
+                this.dialogVisible = true
+            },
+            deleteGame() {
+                this.dialogVisible = false
+                this.$emit('deleteGame', this.id)
+            },
+            cancelDelete() {
+                this.dialogVisible = false
             }
         }
     }
@@ -92,5 +118,14 @@
     }
     tr:hover > td > a {
         color: white;
+    }
+    .dialog {
+        text-align: center;
+    }
+    .dialog > div:first-child {
+        padding-bottom: 1.5rem;
+    }
+    .dialog > div:last-child > a:first-child {
+        margin-right: 0.6rem;
     }
 </style>

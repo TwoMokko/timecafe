@@ -22,10 +22,17 @@
 </template>
 
 <script>
+    import HeaderText from "@/components/UI/HeaderText";
+    import MyButton from "@/components/UI/MyButton";
+    import MyDialog from "@/components/UI/MyDialog";
     import GameDialog from "@/components/site/GameDialog";
+
     export default {
         name: "GameItem",
         components: {
+            HeaderText,
+            MyButton,
+            MyDialog,
             GameDialog,
         },
         props: {
@@ -41,7 +48,7 @@
         },
         methods: {
             showDialog() {
-                this.dialogVisible = true;
+                this.dialogVisible = true
             }
         }
     }
